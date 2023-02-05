@@ -3,12 +3,12 @@
 #define WIFI_SSID "SSID"//**Your SSID here**
 #define WIFI_PWD "password"//**Your password here** leave empty if open (bad!)
 
-#define MQTT_SERVER "192.168.1.4"//**IP address here of your MQTT server**
+#define MQTT_SERVER "192.168.1.40"//**IP address here of your MQTT server**
 #define MQTT_USERNAME ""//leave empty if not set (bad!)
 #define MQTT_PASSWORD ""//leave empty if not set (bad!)
 #define MQTT_PORT 1883
 
-#define FREQUENCY 30000 //query values every 30 sec
+#define FREQUENCY 1000 //query values every 30 sec
 
 #if defined(ARDUINO_M5Stick_C) || defined(ARDUINO_M5Stick_C_Plus)
 //Values used when **M5StickC** or **M5STickCPlus** environment is selected:
@@ -57,7 +57,7 @@
 //#include "def/ALTHERMA(HPSU6_ULTRA).h"
 //#include "def/ALTHERMA(HYBRID).h"
 //#include "def/ALTHERMA(LT-D7_E_BML).h"
-//#include "def/ALTHERMA(LT_11-16KW_HYDROSPLIT_HYDRO_UNIT).h"
+#include "def/ALTHERMA(LT_11-16KW_HYDROSPLIT_HYDRO_UNIT).h"
 //#include "def/ALTHERMA(LT_CA_CB_04-08KW).h"
 //#include "def/ALTHERMA(LT_CA_CB_11-16KW).h"
 //#include "def/ALTHERMA(LT_DA_04-08KW).h"
@@ -72,5 +72,5 @@
 
 #ifndef LABELDEF
 #warning "NO DEFINITION SELECTED: Please select your heat pump definition in /src/setup.h -- Using default."
-#include "def/DEFAULT.h"
+//#include "def/DEFAULT.h"
 #endif
